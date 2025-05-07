@@ -10,4 +10,4 @@ Webpack is a tool for bundling modules in JavaScript applications, grouping reso
   }
 }
 ```
-**node dist/main.js**: ***To start the application of webpack***
+**node public/main.js**: ***To start the application of webpack***

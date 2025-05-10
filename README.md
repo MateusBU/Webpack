@@ -12,6 +12,8 @@ Webpack is a tool for bundling modules in JavaScript applications, grouping reso
 ```
 **node public/main.js**: ***To start the application of webpack***
 
+**npm run build**: run production to minimize .js and .css files in public folder.
+
 ## **Dependences**
 **css-loader**: processes CSS imports.
 **mini-css-extract-plugin**: separates CSS into its own files for production.

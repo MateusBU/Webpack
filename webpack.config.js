@@ -1,8 +1,11 @@
+const modeDev = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const terserPlugin = require('terser-webpack-plugin');
+const cssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
-    mode: 'development', //or production (create an minimalist code)
+    mode: modeDev ? 'development' : 'production', //or production (create an minimalist code)
     entry: './src/main.js',
     output: {
         filename: 'main.js',
@@ -13,6 +16,19 @@ module.exports = {
             filename: 'style.css',
         })
     ],
+    optimization:{
+        minimizer:[
+            new cssMinimizerPlugin({
+                parallel: true
+            }),
+            new terserPlugin({
+                parallel: true,
+                terserOptions: {
+                    ecma: 6,
+                },
+            }),
+        ]
+    },
     module: {
         rules: [{
             test: /\.s?[ac]ss$/, //read css files  .sass or .css or .scss

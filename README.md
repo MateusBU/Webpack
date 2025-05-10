@@ -15,8 +15,14 @@ Webpack is a tool for bundling modules in JavaScript applications, grouping reso
 **npm run build**: run production to minimize .js and .css files in public folder.
 
 ## **Dependences**
-**css-loader**: processes CSS imports.
-**mini-css-extract-plugin**: separates CSS into its own files for production.
-**style-loader injects CSS**: into the page in development.
-**webpack**: is the bundler that handles assets.
-**webpack-cli**: allows Webpack to be run via the command line.
+- **`webpack`**: The core module bundler that compiles and bundles your JavaScript and assets.
+- **`webpack-cli`**: Provides the command-line interface to run Webpack commands.
+- **`css-loader`**: Lets you import CSS into JavaScript and resolves `@import` and `url()` paths.
+- **`style-loader`**: Injects CSS into the DOM using `<style>` tags, typically used during development.
+- **`mini-css-extract-plugin`**: Extracts CSS into separate `.css` files, better for production environments.
+- **`css-minimizer-webpack-plugin`**: Minifies CSS output to reduce file size and improve load performance.
+- **`sass`**: Dart Sass compiler used to convert SCSS/Sass code into standard CSS.
+- **`sass-loader`**: A Webpack loader that compiles Sass during the build.
+- **`gulp-sass`**: Sass compiler for use with Gulp (not needed if using Webpack only).
+- **`terser-webpack-plugin`**: Minifies and optimizes JavaScript code; default in Webpack 5.
+- **`cross-env`**: Enables setting environment variables in a cross-platform way for NPM scripts.

@@ -11,6 +11,12 @@ module.exports = {
         filename: 'main.js',
         path: __dirname + '/public' 
     },
+    devServer: {
+        static: {
+            directory: __dirname + '/public',
+        },
+        port: 9000,
+    },
     plugins:[
         new MiniCssExtractPlugin({
             filename: 'style.css',
@@ -38,6 +44,10 @@ module.exports = {
                 'css-loader', //interpret @import, url()...
                 'sass-loader',
             ]
+        },
+        {
+            test: /\.(png|svg|jpg|gif)$/,
+            use: ['file-loader']
         }]
     }
 }

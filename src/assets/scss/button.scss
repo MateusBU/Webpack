@@ -1,5 +1,7 @@
-.button{
-    background-color:  $color-button-standard;
-    color: $color-bg-black-standard;
-    font-size: 1.8em;
+@use 'variables';
+
+.button {
+  background-color: variables.$color-button-standard;
+  color: variables.$color-bg-black-standard;
+  font-size: 1.8em;
 }

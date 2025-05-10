@@ -11,3 +11,10 @@ Webpack is a tool for bundling modules in JavaScript applications, grouping reso
 }
 ```
 **node public/main.js**: ***To start the application of webpack***
+
+## **Dependences**
+**css-loader**: processes CSS imports.
+**mini-css-extract-plugin**: separates CSS into its own files for production.
+**style-loader injects CSS**: into the page in development.
+**webpack**: is the bundler that handles assets.
+**webpack-cli**: allows Webpack to be run via the command line.
